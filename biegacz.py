@@ -10,12 +10,12 @@ pygame.display.set_caption('Biegacz')
 clock = pygame.time.Clock()
 test_font = pygame.font.Font('font/Rainbow Memories.otf', 50)
 
-tlo = pygame.image.load('graphics/background/1 background/orig.png')
-bohater1 = pygame.image.load('graphics/player/1 Pink_Monster/Pink_Monster.png')
+tlo = pygame.image.load('graphics/background/1 background/orig.png').convert_alpha() #dodano convert_alpha(), w celu optymalizacji gry
+bohater1 = pygame.image.load('graphics/player/1 Pink_Monster/Pink_Monster.png').convert_alpha()
 text_surface = test_font.render('Start', True, 'White')
-crystal1 = pygame.image.load('graphics/objects/4.png')
+crystal1 = pygame.image.load('graphics/objects/4.png').convert_alpha()
 
-bohater1 = pygame.transform.scale(bohater1, (64, 64))
+bohater1 = pygame.transform.scale(bohater1, (64, 64)) #skalowanie obiektu
 crystal1 = pygame.transform.scale(crystal1, (64, 64))
 crystal1_x_pos = 0
 crystal1_y_pos = 0
